@@ -10,10 +10,6 @@ import Clarifai from 'clarifai';
 import { signOut } from '../../features/Signin/authActions';
 import { updateEntries } from '../../features/FaceRecognition/entriesActions';
 
-const faceApp = new Clarifai.App({
-	apiKey: process.env.REACT_APP_FACE_KEY
-});
-
 const actions = {
 	signOut,
 	updateEntries
