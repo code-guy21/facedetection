@@ -5,9 +5,9 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 const configureStore = () => {
 	const middleWares = [thunk];
-	const enhancedComposer = composeWithDevTools(applyMiddleware(...middleWares));
+	//const enhancedComposer = composeWithDevTools(applyMiddleware(...middleWares));
 
-	return createStore(reducers, enhancedComposer);
+	return createStore(reducers, applyMiddleware(...middleWares));
 };
 
 export default configureStore;
